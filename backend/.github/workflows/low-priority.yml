@@ -1,0 +1,14 @@
+name: Low Priority CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  lightweight-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Low Priority Validation
+        run: echo "Running lightweight CI for low priority task"
